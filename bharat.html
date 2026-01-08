@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bharat Capital - Empowering Every Indian with Government Schemes. End-to-end assistance for Mudra Loans, MSME Registration, and Government Benefits.">
+    <meta name="theme-color" content="#1B7A3C">
+    <title>Bharat Capital - Government Schemes Assistance</title>
+    
+    <style>
+        /* ============================================
+           EMBEDDED CSS - COMPLETE STYLING
+           ============================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #1B7A3C;
+            --light-green: #E8F5E9;
+            --primary-blue: #0B9FD9;
+            --light-blue: #E3F2FD;
+            --white: #FFFFFF;
+            --gray-light: #F5F5F5;
+            --gray-dark: #333333;
+            --text-color: #2C3E50;
+            --border-color: #E0E0E0;
+            --success-color: #4CAF50;
+            --warning-color: #FF9800;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background-color: var(--white);
+            color: var(--text-color);
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.4;
+            font-weight: 600;
+            color: var(--gray-dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #2E8B57 100%);
+            color: var(--white);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            background: var(--white);
+            padding: 4px;
+            object-fit: contain;
+        }
+
+        .company-info h1 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+        .nav-link {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid transparent;
+            color: var(--white);
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: var(--white);
+            color: var(--primary-green);
+            border-color: var(--white);
+        }
+
+        .language-switcher {
+            background: var(--white);
+            color: var(--primary-green);
+            border: 2px solid var(--white);
+            padding: 0.6rem 1rem;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .language-switcher:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Container */
+        .container, .container-about, .container-services, .container-contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Main Content & Sections */
+        .main-content {
+            min-height: calc(100vh - 200px);
+        }
+
+        .section {
+            display: none;
+            padding: 3rem 1rem;
+            min-height: 100vh;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-content {
+            padding: 1rem;
+        }
+
+        .hero-title {
+            color: var(--primary-green);
+            font-size: 2.5rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: #156A2D;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(27, 122, 60, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: #0880B0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(11, 159, 217, 0.3);
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: var(--light-green);
+            padding: 3rem 1rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        .trust-section h3 {
+            text-align: center;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .trust-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .trust-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .trust-card h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.75rem;
+        }
+
+        .trust-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .container-about {
+            padding: 3rem 1rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-values {
+            background: var(--light-blue);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .about-values h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .values-list {
+            list-style: none;
+        }
+
+        .values-list li {
+            padding: 0.8rem 0;
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(11, 159, 217, 0.2);
+        }
+
+        .values-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Stats Section */
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card h4 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .stat-card p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Services Section */
+        .container-services {
+            padding: 3rem 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-green);
+            box-shadow: 0 8px 20px rgba(27, 122, 60, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        .container-contact {
+            padding: 3rem 1rem;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form-section,
+        .contact-info-section {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form-section h3,
+        .contact-info-section h3 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.8rem 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(27, 122, 60, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+            display: none;
+        }
+
+        .form-message.success {
+            display: block;
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--success-color);
+            border: 2px solid var(--success-color);
+        }
+
+        .form-message.error {
+            display: block;
+            background: rgba(255, 152, 0, 0.1);
+            color: var(--warning-color);
+            border: 2px solid var(--warning-color);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-info h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .contact-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-green);
+        }
+
+        /* Quick Action Buttons */
+        .contact-quick-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .quick-action-btn {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--primary-green);
+            background: var(--white);
+            color: var(--primary-green);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .quick-action-btn:hover {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .quick-action-btn.whatsapp {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .quick-action-btn.whatsapp:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-floating {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-floating:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-content p {
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .navbar {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .logo-section {
+                justify-content: center;
+            }
+
+            .company-info h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-quick-actions {
+                flex-direction: column;
+            }
+
+            .quick-action-btn {
+                width: 100%;
+            }
+
+            .whatsapp-floating {
+                width: 50px;
+                height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+                font-size: 1.5rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+                min-height: auto;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header .container {
+                padding: 0 0.5rem;
+            }
+
+            .navbar {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+            }
+
+            .language-switcher {
+                width: 100%;
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            .company-info h1 {
+                font-size: 1.2rem;
+            }
+
+            .tagline {
+                font-size: 0.8rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card h4 {
+                font-size: 2rem;
+            }
+
+            .contact-info-section {
+                padding: 1.5rem;
+            }
+
+            .contact-form-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div style="width: 60px; height: 60px; background: white; border-radius: 8px; padding: 4px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem;">🇮🇳</span>
+                </div>
+                <div class="company-info">
+                    <h1>Bharat Capital</h1>
+                    <p class="tagline" data-key="tagline">Empowering Rural & Every Indian with Government Schemes</p>
+                </div>
+            </div>
+            
+            <nav class="navbar">
+                <button class="nav-link active" onclick="showSection('home')" data-key="nav_home">Home</button>
+                <button class="nav-link" onclick="showSection('about')" data-key="nav_about">About Us</button>
+                <button class="nav-link" onclick="showSection('services')" data-key="nav_services">Services</button>
+                <button class="nav-link" onclick="showSection('contact')" data-key="nav_contact">Contact</button>
+                
+                <select id="languageSelect" class="language-switcher" onchange="switchLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="bn">বাংলা</option>
+                </select>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title" data-key="home_title">Empowering Every Indian with Government Schemes</h2>
+                    <p class="hero-subtitle" data-key="home_subtitle">Complete guidance and assistance from consultation to benefit receipt. We make government schemes accessible to all.</p>
+                    <div class="hero-ctas">
+                        <button class="btn btn-primary" onclick="makeCall()">
+                            <span>📞</span>
+                            <span data-key="call_now">Call Now</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="openWhatsApp()">
+                            <span>💬</span>
+                            <span data-key="whatsapp_consult">WhatsApp Consultation</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <svg viewBox="0 0 400 400" style="max-width: 100%; height: auto;">
+                        <rect width="400" height="400" fill="#E8F5E9"/>
+                        <circle cx="200" cy="150" r="50" fill="#1B7A3C"/>
+                        <rect x="180" y="220" width="40" height="80" fill="#8B4513"/>
+                        <polygon points="160,220 200,180 240,220" fill="#228B22"/>
+                        <circle cx="120" cy="300" r="8" fill="#90EE90"/>
+                        <circle cx="160" cy="310" r="8" fill="#90EE90"/>
+                        <circle cx="240" cy="305" r="8" fill="#90EE90"/>
+                        <circle cx="280" cy="295" r="8" fill="#90EE90"/>
+                        <rect x="280" y="200" width="60" height="60" fill="#FFB366" rx="4"/>
+                        <polygon points="310,200 325,190 325,210" fill="#FFA500"/>
+                        <text x="200" y="360" font-size="24" text-anchor="middle" fill="#1B7A3C" font-weight="bold">Rural Growth</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <section class="trust-section">
+                <h3 data-key="why_choose_us">Why Choose Bharat Capital?</h3>
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-icon">✓</div>
+                        <h4 data-key="transparency">Transparency</h4>
+                        <p data-key="transparency_desc">Complete clarity in all processes and no hidden charges</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon">✓</div>
+                        <h4 data-key="compliance">Government Compliance</h4>
+                        <p data-key="compliance_desc">Fully registered and aligned with government norms</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon">✓</div>
+                        <h4 data-key="guidance">Expert Guidance</h4>
+                        <p data-key="guidance_desc">Professional support at every step of your journey</p>
+                    </div>
+                    <div class="trust-card">
+                        <div class="trust-icon">✓</div>
+                        <h4 data-key="verification">Verification Support</h4>
+                        <p data-key="verification_desc">We handle all documentation and verification processes</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container-about">
+                <h2 class="section-title" data-key="about_title">About Bharat Capital</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-key="about_mission">Bharat Capital is dedicated to bridging the gap between Indian citizens and government schemes. We provide end-to-end assistance to individuals, rural citizens, MSMEs, and small business owners to access and benefit from government programs like Mudra Loans, MSME schemes, and various subsidies.</p>
+                        
+                        <p data-key="about_commitment">Our commitment is to ensure that every Indian, regardless of their educational background or location, can access government benefits with confidence. We handle consultation, documentation, application submission, and follow-ups until you receive your benefits.</p>
+                    </div>
+
+                    <div class="about-values">
+                        <h3 data-key="our_values">Our Core Values</h3>
+                        <ul class="values-list">
+                            <li data-key="value_transparency">🎯 Transparency - No confusion, only clarity</li>
+                            <li data-key="value_support">🤝 Full Support - From start to finish</li>
+                            <li data-key="value_compliance">⚖️ Compliance - Government-aligned processes</li>
+                            <li data-key="value_accessibility">♿ Accessibility - Simple language, large text</li>
+                            <li data-key="value_results">✅ Results - Focused on actual benefits</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h4>5000+</h4>
+                        <p data-key="stat_beneficiaries">Happy Beneficiaries</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>₹50 Cr+</h4>
+                        <p data-key="stat_benefits">Benefits Distributed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>98%</h4>
+                        <p data-key="stat_success">Success Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>24/7</h4>
+                        <p data-key="stat_support">Customer Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container-services">
+                <h2 class="section-title" data-key="services_title">Our Services</h2>
+                <p class="section-subtitle" data-key="services_subtitle">Comprehensive assistance for all government schemes</p>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3 data-key="service_consultation">Government Scheme Consultation</h3>
+                        <p data-key="service_consultation_desc">Personalized guidance to identify and understand schemes suitable for your situation. We explain eligibility, benefits, and the complete process in simple language.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3 data-key="service_mudra">Mudra Loan Assistance</h3>
+                        <p data-key="service_mudra_desc">Complete support for Mudra Loans including eligibility check, business plan preparation, documentation, and bank negotiations. Zero processing charges.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3 data-key="service_msme">MSME Registration & Benefits</h3>
+                        <p data-key="service_msme_desc">Fast-track MSME registration with guidance on all schemes - PM VISHWAKARMA, GST benefits, subsidies, and credit facilities for small businesses.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📄</div>
+                        <h3 data-key="service_documentation">Documentation & Application</h3>
+                        <p data-key="service_documentation_desc">Expert assistance in preparing all required documents, filling applications correctly, and submitting them on time. We ensure nothing is missed.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">✅</div>
+                        <h3 data-key="service_followup">End-to-End Follow-ups</h3>
+                        <p data-key="service_followup_desc">We don't stop at application. We follow up with government offices, provide status updates, and ensure you receive your benefits without delay.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎓</div>
+                        <h3 data-key="service_training">Training & Education</h3>
+                        <p data-key="service_training_desc">Free training on business planning, loan management, government compliance, and scheme-specific requirements. Workshops in Hindi and local languages.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container-contact">
+                <h2 class="section-title" data-key="contact_title">Contact Us</h2>
+                
+                <div class="contact-wrapper">
+                    <div class="contact-form-section">
+                        <h3 data-key="contact_form_title">Send Us Your Details</h3>
+                        <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name" data-key="form_name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" data-key="form_phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+91 9876543210">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="language" data-key="form_language">Preferred Language</label>
+                                <select id="language" name="language">
+                                    <option value="en">English</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="bn">Bengali</option>
+                                    <option value="mr">Marathi</option>
+                                    <option value="gu">Gujarati</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="scheme" data-key="form_scheme">Scheme Interested In *</label>
+                                <select id="scheme" name="scheme" required>
+                                    <option value="">Select a scheme</option>
+                                    <option value="mudra">Mudra Loan</option>
+                                    <option value="msme">MSME Registration</option>
+                                    <option value="subsidy">Government Subsidies</option>
+                                    <option value="loan">Business Loan</option>
+                                    <option value="training">Skill Training Schemes</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" data-key="form_message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" data-key="form_submit">Submit Request</button>
+                        </form>
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h3 data-key="contact_info_title">Contact Information</h3>
+                        
+                        <div class="contact-info">
+                            <h4 data-key="contact_address">📍 Address</h4>
+                            <p>Shri Chember, Second Floor,<br>
+                               Opposite To Shops Stop,<br>
+                               Wakedewadi, Old Mumbai Pune Highway,<br>
+                               Shivajinagar, Pune-411005,<br>
+                               Maharashtra, India</p>
+                        </div>
+
+                        <div class="contact-info">
+                            <h4 data-key="contact_phone">📞 Phone</h4>
+                            <p>
+                                <a href="tel:+917980221968" class="contact-link">+91 79802 21968</a><br>
+                                <span data-key="available_hours">Available 9:00 AM - 6:00 PM</span>
+                            </p>
+                        </div>
+
+                        <div class="contact-info">
+                            <h4 data-key="contact_hours">🕐 Working Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+                               Saturday: 10:00 AM - 4:00 PM<br>
+                               Sunday: Closed</p>
+                        </div>
+
+                        <div class="contact-quick-actions">
+                            <button class="quick-action-btn" onclick="makeCall()" data-key="quick_call">Call Now</button>
+                            <button class="quick-action-btn whatsapp" onclick="openWhatsApp()" data-key="quick_whatsapp">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Bharat Capital. <span data-key="footer_mission">All Rights Reserved. Empowering Indians with Government Schemes.</span></p>
+            <p><span data-key="footer_trust">Trusted Partner in Your Success | Government Scheme Assistance</span></p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <button class="whatsapp-floating" onclick="openWhatsApp()" title="Chat with us on WhatsApp">
+        <span>💬</span>
+    </button>
+
+    <script>
+        /* ============================================
+           EMBEDDED JAVASCRIPT - COMPLETE FUNCTIONALITY
+           ============================================ */
+
+        // Phone number
+        const PHONE_NUMBER = '7980221968';
+        const PHONE_FULL = '+917980221968';
+
+        // Multi-language Translation Dictionary
+        const translations = {
+            en: {
+                tagline: 'Empowering Rural & Every Indian with Government Schemes',
+                nav_home: 'Home',
+                nav_about: 'About Us',
+                nav_services: 'Services',
+                nav_contact: 'Contact',
+                home_title: 'Empowering Every Indian with Government Schemes',
+                home_subtitle: 'Complete guidance and assistance from consultation to benefit receipt. We make government schemes accessible to all.',
+                call_now: 'Call Now',
+                whatsapp_consult: 'WhatsApp Consultation',
+                why_choose_us: 'Why Choose Bharat Capital?',
+                transparency: 'Transparency',
+                transparency_desc: 'Complete clarity in all processes and no hidden charges',
+                compliance: 'Government Compliance',
+                compliance_desc: 'Fully registered and aligned with government norms',
+                guidance: 'Expert Guidance',
+                guidance_desc: 'Professional support at every step of your journey',
+                verification: 'Verification Support',
+                verification_desc: 'We handle all documentation and verification processes',
+                about_title: 'About Bharat Capital',
+                about_mission: 'Bharat Capital is dedicated to bridging the gap between Indian citizens and government schemes. We provide end-to-end assistance to individuals, rural citizens, MSMEs, and small business owners to access and benefit from government programs like Mudra Loans, MSME schemes, and various subsidies.',
+                about_commitment: 'Our commitment is to ensure that every Indian, regardless of their educational background or location, can access government benefits with confidence. We handle consultation, documentation, application submission, and follow-ups until you receive your benefits.',
+                our_values: 'Our Core Values',
+                value_transparency: '🎯 Transparency - No confusion, only clarity',
+                value_support: '🤝 Full Support - From start to finish',
+                value_compliance: '⚖️ Compliance - Government-aligned processes',
+                value_accessibility: '♿ Accessibility - Simple language, large text',
+                value_results: '✅ Results - Focused on actual benefits',
+                stat_beneficiaries: 'Happy Beneficiaries',
+                stat_benefits: 'Benefits Distributed',
+                stat_success: 'Success Rate',
+                stat_support: 'Customer Support',
+                services_title: 'Our Services',
+                services_subtitle: 'Comprehensive assistance for all government schemes',
+                service_consultation: 'Government Scheme Consultation',
+                service_consultation_desc: 'Personalized guidance to identify and understand schemes suitable for your situation. We explain eligibility, benefits, and the complete process in simple language.',
+                service_mudra: 'Mudra Loan Assistance',
+                service_mudra_desc: 'Complete support for Mudra Loans including eligibility check, business plan preparation, documentation, and bank negotiations. Zero processing charges.',
+                service_msme: 'MSME Registration & Benefits',
+                service_msme_desc: 'Fast-track MSME registration with guidance on all schemes - PM VISHWAKARMA, GST benefits, subsidies, and credit facilities for small businesses.',
+                service_documentation: 'Documentation & Application',
+                service_documentation_desc: 'Expert assistance in preparing all required documents, filling applications correctly, and submitting them on time. We ensure nothing is missed.',
+                service_followup: 'End-to-End Follow-ups',
+                service_followup_desc: 'We don\'t stop at application. We follow up with government offices, provide status updates, and ensure you receive your benefits without delay.',
+                service_training: 'Training & Education',
+                service_training_desc: 'Free training on business planning, loan management, government compliance, and scheme-specific requirements. Workshops in Hindi and local languages.',
+                contact_title: 'Contact Us',
+                contact_form_title: 'Send Us Your Details',
+                form_name: 'Full Name *',
+                form_phone: 'Phone Number *',
+                form_language: 'Preferred Language',
+                form_scheme: 'Scheme Interested In *',
+                form_message: 'Message',
+                form_submit: 'Submit Request',
+                contact_info_title: 'Contact Information',
+                contact_address: '📍 Address',
+                contact_phone: '📞 Phone',
+                available_hours: 'Available 9:00 AM - 6:00 PM',
+                contact_hours: '🕐 Working Hours',
+                quick_call: 'Call Now',
+                quick_whatsapp: 'WhatsApp',
+                footer_mission: 'All Rights Reserved. Empowering Indians with Government Schemes.',
+                footer_trust: 'Trusted Partner in Your Success | Government Scheme Assistance'
+            },
+            hi: {
+                tagline: 'ग्रामीण और हर भारतीय को सरकारी योजनाओं के साथ सशक्त बनाना',
+                nav_home: 'होम',
+                nav_about: 'हमारे बारे में',
+                nav_services: 'सेवाएं',
+                nav_contact: 'संपर्क',
+                home_title: 'हर भारतीय को सरकारी योजनाओं के साथ सशक्त बनाना',
+                home_subtitle: 'परामर्श से लेकर लाभ प्राप्ति तक पूर्ण मार्गदर्शन और सहायता। हम सरकारी योजनाओं को सभी के लिए सुलभ बनाते हैं।',
+                call_now: 'अभी कॉल करें',
+                whatsapp_consult: 'WhatsApp परामर्श',
+                why_choose_us: 'भारत कैपिटल को क्यों चुनें?',
+                transparency: 'पारदर्शिता',
+                transparency_desc: 'सभी प्रक्रियाओं में पूर्ण स्पष्टता और कोई छिपा हुआ शुल्क नहीं',
+                compliance: 'सरकारी अनुपालन',
+                compliance_desc: 'पूरी तरह से पंजीकृत और सरकारी मानदंडों के अनुसार',
+                guidance: 'विशेषज्ञ मार्गदर्शन',
+                guidance_desc: 'आपकी यात्रा के प्रत्येक चरण में व्यावसायिक समर्थन',
+                verification: 'सत्यापन सहायता',
+                verification_desc: 'हम सभी दस्तावेज और सत्यापन प्रक्रियाओं को संभालते हैं',
+                about_title: 'भारत कैपिटल के बारे में',
+                about_mission: 'भारत कैपिटल भारतीय नागरिकों और सरकारी योजनाओं के बीच का अंतर पाटने के लिए समर्पित है। हम व्यक्तियों, ग्रामीण नागरिकों, MSMEs और छोटे व्यवसायियों को सरकारी कार्यक्रमों जैसे मुद्रा ऋण, MSME योजनाओं और विभिन्न सब्सिडी का लाभ उठाने में सहायता प्रदान करते हैं।',
+                about_commitment: 'हमारी प्रतिबद्धता यह सुनिश्चित करना है कि हर भारतीय, चाहे उनकी शैक्षणिक पृष्ठभूमि या स्थान कुछ भी हो, सरकारी लाभों तक आत्मविश्वास के साथ पहुंच सकता है।',
+                our_values: 'हमारे मूल मूल्य',
+                value_transparency: '🎯 पारदर्शिता - कोई भ्रम नहीं, केवल स्पष्टता',
+                value_support: '🤝 पूर्ण समर्थन - शुरू से अंत तक',
+                value_compliance: '⚖️ अनुपालन - सरकार के अनुरूप प्रक्रियाएं',
+                value_accessibility: '♿ पहुंच - सरल भाषा, बड़ा पाठ',
+                value_results: '✅ परिणाम - वास्तविक लाभों पर केंद्रित',
+                stat_beneficiaries: 'खुश लाभार्थी',
+                stat_benefits: 'वितरित लाभ',
+                stat_success: 'सफलता दर',
+                stat_support: 'ग्राहक सहायता',
+                services_title: 'हमारी सेवाएं',
+                services_subtitle: 'सभी सरकारी योजनाओं के लिए व्यापक सहायता',
+                service_consultation: 'सरकारी योजना परामर्श',
+                service_consultation_desc: 'आपकी स्थिति के लिए उपयुक्त योजनाओं की पहचान और समझने के लिए व्यक्तिगत मार्गदर्शन।',
+                service_mudra: 'मुद्रा ऋण सहायता',
+                service_mudra_desc: 'मुद्रा ऋणों के लिए संपूर्ण समर्थन। शून्य प्रसंस्करण शुल्क।',
+                service_msme: 'MSME पंजीकरण और लाभ',
+                service_msme_desc: 'तेजी से MSME पंजीकरण और PM VISHWAKARMA सहित सभी योजनाओं पर मार्गदर्शन।',
+                service_documentation: 'दस्तावेज़ीकरण और आवेदन',
+                service_documentation_desc: 'सभी आवश्यक दस्तावेज़ तैयार करने में विशेषज्ञ सहायता।',
+                service_followup: 'अंत से अंत तक अनुवर्ती',
+                service_followup_desc: 'हम आवेदन के बाद भी आपके साथ हैं और आपके लाभ सुनिश्चित करते हैं।',
+                service_training: 'प्रशिक्षण और शिक्षा',
+                service_training_desc: 'व्यावसायिक योजना, ऋण प्रबंधन और सरकारी अनुपालन पर मुफ्त प्रशिक्षण।',
+                contact_title: 'हमसे संपर्क करें',
+                contact_form_title: 'हमें अपना विवरण भेजें',
+                form_name: 'पूरा नाम *',
+                form_phone: 'फोन नंबर *',
+                form_language: 'पसंदीदा भाषा',
+                form_scheme: 'योजना में रुचि *',
+                form_message: 'संदेश',
+                form_submit: 'अनुरोध सबमिट करें',
+                contact_info_title: 'संपर्क जानकारी',
+                contact_address: '📍 पता',
+                contact_phone: '📞 फोन',
+                available_hours: 'सुबह 9:00 से शाम 6:00 तक उपलब्ध',
+                contact_hours: '🕐 कार्य समय',
+                quick_call: 'अभी कॉल करें',
+                quick_whatsapp: 'WhatsApp',
+                footer_mission: 'सर्वाधिकार सुरक्षित। भारतीयों को सरकारी योजनाओं के साथ सशक्त बनाना।',
+                footer_trust: 'आपकी सफलता में विश्वस्त भागीदार | सरकारी योजना सहायता'
+            },
+            bn: {
+                tagline: 'গ্রামীণ এবং প্রতিটি ভারতীয়কে সরকারী স্কিম দিয়ে ক্ষমতায়ন করা',
+                nav_home: 'হোম',
+                nav_about: 'আমাদের সম্পর্কে',
+                nav_services: 'সেবা',
+                nav_contact: 'যোগাযোগ',
+                home_title: 'প্রতিটি ভারতীয়কে সরকারী স্কিম দিয়ে ক্ষমতায়ন করা',
+                home_subtitle: 'পরামর্শ থেকে সুবিধা প্রাপ্তি পর্যন্ত সম্পূর্ণ নির্দেশনা এবং সহায়তা। আমরা সরকারী স্কিমগুলি সবার জন্য সহজলভ্য করি।',
+                call_now: 'এখনই কল করুন',
+                whatsapp_consult: 'WhatsApp পরামর্শ',
+                why_choose_us: 'ভারত ক্যাপিটাল কেন বেছে নিবেন?',
+                transparency: 'স্বচ্ছতা',
+                transparency_desc: 'সমস্ত প্রক্রিয়ায় সম্পূর্ণ স্পষ্টতা এবং কোন লুকানো চার্জ নেই',
+                compliance: 'সরকারী সম্মতি',
+                compliance_desc: 'সম্পূর্ণভাবে নিবন্ধিত এবং সরকারী নর্মের সাথে সামঞ্জস্যপূর্ণ',
+                guidance: 'বিশেষজ্ঞ নির্দেশনা',
+                guidance_desc: 'আপনার যাত্রার প্রতিটি পর্যায়ে পেশাদার সহায়তা',
+                verification: 'যাচাইকরণ সহায়তা',
+                verification_desc: 'আমরা সমস্ত ডকুমেন্টেশন এবং যাচাইকরণ প্রক্রিয়া পরিচালনা করি',
+                about_title: 'ভারত ক্যাপিটাল সম্পর্কে',
+                about_mission: 'ভারত ক্যাপিটাল ভারতীয় নাগরিক এবং সরকারী স্কিমের মধ্যে ব্যবধান দূর করতে নিবেদিত।',
+                about_commitment: 'আমাদের প্রতিশ্রুতি নিশ্চিত করা যে প্রতিটি ভারতীয় সরকারী সুবিধা আত্মবিশ্বাসের সাথে পেতে পারে।',
+                our_values: 'আমাদের মূল মূল্যবোধ',
+                value_transparency: '🎯 স্বচ্ছতা - কোন বিভ্রান্তি নেই, শুধুমাত্র স্পষ্টতা',
+                value_support: '🤝 সম্পূর্ণ সহায়তা - শুরু থেকে শেষ পর্যন্ত',
+                value_compliance: '⚖️ সম্মতি - সরকার-সংযুক্ত প্রক্রিয়া',
+                value_accessibility: '♿ অ্যাক্সেসযোগ্যতা - সহজ ভাষা, বড় পাঠ',
+                value_results: '✅ ফলাফল - প্রকৃত সুবিধার উপর দৃষ্টি নিবদ্ধ',
+                stat_beneficiaries: 'সন্তুষ্ট সুবিধাভোগী',
+                stat_benefits: 'বিতরণকৃত সুবিধা',
+                stat_success: 'সাফল্যের হার',
+                stat_support: 'গ্রাহক সহায়তা',
+                services_title: 'আমাদের সেবা',
+                services_subtitle: 'সমস্ত সরকারী স্কিমের জন্য ব্যাপক সহায়তা',
+                service_consultation: 'সরকারী স্কিম পরামর্শ',
+                service_consultation_desc: 'আপনার পরিস্থিতির জন্য উপযুক্ত স্কিম চিহ্নিত করতে ব্যক্তিগত নির্দেশনা।',
+                service_mudra: 'মুদ্রা ঋণ সহায়তা',
+                service_mudra_desc: 'মুদ্রা ঋণের জন্য সম্পূর্ণ সহায়তা। শূন্য প্রসেসিং চার্জ।',
+                service_msme: 'MSME নিবন্ধন এবং সুবিধা',
+                service_msme_desc: 'দ্রুত MSME নিবন্ধন এবং সমস্ত স্কিমে নির্দেশনা।',
+                service_documentation: 'ডকুমেন্টেশন এবং আবেদন',
+                service_documentation_desc: 'সমস্ত প্রয়োজনীয় নথি প্রস্তুত করতে বিশেষজ্ঞ সহায়তা।',
+                service_followup: 'শেষ থেকে শেষ পর্যন্ত অনুসরণ',
+                service_followup_desc: 'আমরা আবেদনের পরেও আপনার সাথে আছি এবং আপনার সুবিধা নিশ্চিত করি।',
+                service_training: 'প্রশিক্ষণ এবং শিক্ষা',
+                service_training_desc: 'ব্যবসায়িক পরিকল্পনা, ঋণ ব্যবস্থাপনা এবং সরকারী সম্মতিতে বিনামূল্যে প্রশিক্ষণ।',
+                contact_title: 'আমাদের সাথে যোগাযোগ করুন',
+                contact_form_title: 'আমাদের আপনার বিবরণ পাঠান',
+                form_name: 'সম্পূর্ণ নাম *',
+                form_phone: 'ফোন নম্বর *',
+                form_language: 'পছন্দের ভাষা',
+                form_scheme: 'আগ্রহী স্কিম *',
+                form_message: 'বার্তা',
+                form_submit: 'অনুরোধ জমা দিন',
+                contact_info_title: 'যোগাযোগের তথ্য',
+                contact_address: '📍 ঠিকানা',
+                contact_phone: '📞 ফোন',
+                available_hours: 'সকাল ৯:০০ থেকে সন্ধ্যা ৬:০০ পর্যন্ত উপলব্ধ',
+                contact_hours: '🕐 কাজের সময়',
+                quick_call: 'এখনই কল করুন',
+                quick_whatsapp: 'WhatsApp',
+                footer_mission: 'সর্বাধিকার সংরক্ষিত। ভারতীয়দের সরকারী স্কিম দিয়ে ক্ষমতায়ন করা।',
+                footer_trust: 'আপনার সাফল্যে বিশ্বস্ত অংশীদার | সরকারী স্কিম সহায়তা'
+            }
+        };
+
+        // Current language
+        let currentLanguage = 'en';
+
+        // Switch Language Function
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            document.documentElement.lang = lang;
+            
+            // Update all elements with data-key attribute
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update language selector
+            document.getElementById('languageSelect').value = lang;
+        }
+
+        // Show Section Function (SPA navigation)
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+
+            // Update nav links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Open WhatsApp Function
+        function openWhatsApp() {
+            const message = 'Hello! I am interested in Bharat Capital services.';
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Make Call Function
+        function makeCall() {
+            window.location.href = `tel:${PHONE_FULL}`;
+        }
+
+        // Handle Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const language = document.getElementById('language').value;
+            const scheme = document.getElementById('scheme').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Validate form
+            if (!name || !phone || !scheme) {
+                showFormMessage('Please fill in all required fields', 'error');
+                return;
+            }
+
+            // Validate phone number
+            const phoneRegex = /^[0-9+\-\s()]{10,}$/;
+            if (!phoneRegex.test(phone)) {
+                showFormMessage('Please enter a valid phone number', 'error');
+                return;
+            }
+
+            // Store form data (in real app, this would be sent to a server)
+            const formData = {
+                name: name,
+                phone: phone,
+                language: language,
+                scheme: scheme,
+                message: message,
+                timestamp: new Date().toLocaleString()
+            };
+
+            // Log form submission
+            console.log('Form submitted:', formData);
+
+            // Save to localStorage (demonstration)
+            let submissions = JSON.parse(localStorage.getItem('bharatCapitalSubmissions') || '[]');
+            submissions.push(formData);
+            localStorage.setItem('bharatCapitalSubmissions', JSON.stringify(submissions));
+
+            // Send WhatsApp message with form data
+            const whatsappMessage = `*New Inquiry from ${name}*\nPhone: ${phone}\nLanguage: ${language}\nScheme: ${scheme}\nMessage: ${message || 'No additional message'}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodedMessage}`, '_blank');
+
+            // Show success message
+            showFormMessage('Thank you! We will contact you soon on WhatsApp.', 'success');
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+        }
+
+        // Show Form Message Function
+        function showFormMessage(message, type) {
+            const messageDiv = document.getElementById('formMessage');
+            messageDiv.textContent = message;
+            messageDiv.className = `form-message ${type}`;
+            
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                messageDiv.className = 'form-message';
+                messageDiv.textContent = '';
+            }, 5000);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial language
+            switchLanguage('en');
+
+            // Add smooth scrolling for navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+                    showSection(section);
+                });
+            });
+
+            // Mobile menu handling
+            if (window.innerWidth <= 768) {
+                // Adjust for mobile
+                console.log('Mobile view detected');
+            }
+        });
+
+        // Handle window resize for responsive behavior
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 768) {
+                // Mobile adjustments
+            } else {
+                // Desktop adjustments
+            }
+        });
+    </script>
+</body>
+</html>
